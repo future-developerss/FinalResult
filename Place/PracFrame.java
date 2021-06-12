@@ -1,5 +1,3 @@
-package Final;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -168,7 +166,7 @@ public class PracFrame extends JFrame {
         location.setBounds(710, 10, 700, 30);
 
         mapB=new JButton("지도 보기");
-        mapB.addActionListener(new Final.PracFrame.LinkListener());
+        mapB.addActionListener(new PracFrame.LinkListener());
         p2.add(mapB);
         mapB.setBounds(1200, 10, 100, 30);
 
@@ -186,15 +184,15 @@ public class PracFrame extends JFrame {
         bottom = new JPanel();
         bottom.setLayout(new BorderLayout());
         main = new RoundButton("메인으로");	main.setBackground(new Color(102, 102, 102));
-        main.addActionListener(new Final.PracFrame.MyActionListener());
+        main.addActionListener(new PracFrame.MyActionListener());
 
         JPanel calP=new JPanel();
         calculatorB = new RoundButton("계산기");
         calculatorB.setBackground(new Color(102, 102, 102));
-        calculatorB.addActionListener(new Final.PracFrame.MyActionListener());
+        calculatorB.addActionListener(new PracFrame.MyActionListener());
         calP.add(calculatorB);
         before = new RoundButton("이전으로");	before.setBackground(new Color(102, 102, 102));
-        before.addActionListener(new Final.PracFrame.MyActionListener());
+        before.addActionListener(new PracFrame.MyActionListener());
 
         bottom.add("East",main);
         bottom.add("Center",calP);
@@ -225,14 +223,14 @@ public class PracFrame extends JFrame {
             if (b.getText().equals("이전으로")){
                 finalLi.remove(finalLi.size()-1);
                 new PlaceQ_3(finalLi, username);
-                Final.PracFrame.this.setVisible(false);
+                PracFrame.this.setVisible(false);
             }
             else if (b.getText().equals("계산기")){
-                new ProjectCalculator("입장료 계산하기");
+                new Calculater("입장료 계산하기");
             }
             else if (b.getText().equals("메인으로")){
                 new survey(username);
-                Final.PracFrame.this.setVisible(false);
+                PracFrame.this.setVisible(false);
             }
         }
     }
