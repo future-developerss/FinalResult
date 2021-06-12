@@ -16,7 +16,7 @@ public class fourthPageQ1 extends JFrame {
 	static int[] choice_temp2 = new int[24];
 	static int[] choice_temp3 = new int[24];
 	static RoundButton[] btn= new RoundButton[4]; 
-	String button_name;
+	static String button_name;
 
 	public fourthPageQ1(String name) {
 		super("¥ÁΩ≈¿« ø¿¥√¿∫?");
@@ -161,7 +161,7 @@ public class fourthPageQ1 extends JFrame {
 					button_name = "Ω“Ω“«‘/√ﬂøÚ";
 
 				}
-				new fourthPageQ2(button_name, username);
+				new fourthPageQ2(button_name, username, choice_temp1, choice_temp2, choice_temp3);
 				fourthPageQ1.this.setVisible(false);
 			}
 			}

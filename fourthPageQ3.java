@@ -9,20 +9,26 @@ public class fourthPageQ3 extends JFrame {
 	JPanel p1, p2,  bt_p5, bottom, contentPane;
 	JLabel title, subtitle,q3;
 	String username;
-	String bt_name2;
+	static String bt_name2;
+	static String bt_back1 = fourthPageQ1.button_name;
 	RoundButton before, main;
 	static String[] text= {"혼자서","가족과","연인과", "친구와"};
 	//ArrayList<Integer> third1Arr = new ArrayList<>();
 	//ArrayList<Integer> sec1Arr = new ArrayList<>();
 	static RoundButton[] btn= new RoundButton[4]; 
 
-	static int [] temp_cq3_1 = fourthPageQ2.temp_cq2_1;
-	static int [] temp_cq3_2 = fourthPageQ2.temp_cq2_2;
-	static int [] temp_cq3_3 = fourthPageQ2.temp_cq2_3;
+	//static int [] temp_cq3_1 = fourthPageQ2.temp_cq2_1;
+	//static int [] temp_cq3_2 = fourthPageQ2.temp_cq2_2;
+	//static int [] temp_cq3_3 = fourthPageQ2.temp_cq2_3;
+	int[] temp1_1, temp1_2, temp1_3;
 
-	public fourthPageQ3(String bt_name, String name) {
-		super("당신의 오늘은?");
+	public fourthPageQ3(String bt_name, String name, int[] temp1, int[] temp2, int[]temp3) {
+		bt_name2 = bt_name;
+		setTitle("당신의 오늘은?");
 		username = name;
+		temp1_1 = temp1;
+		temp1_2 = temp2;
+		temp1_3 = temp3;
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0,0));
 		setContentPane(contentPane);
@@ -90,109 +96,150 @@ public class fourthPageQ3 extends JFrame {
 			RoundButton b=(RoundButton)e.getSource();
 			if (b.getText().equals("이전으로"))
 			{
-				if (bt_name2 == "기쁨/신남") {
-					temp_cq3_1[0] -= 1;		temp_cq3_1[2] -= 1;
-					temp_cq3_1[6] -= 1;		temp_cq3_1[14] -= 1;	
-					temp_cq3_1[20] -= 1; 	temp_cq3_1[23] -= 1;
+				if (bt_name2.equals("기쁨/신남")) {
+					temp1_1[0] -= 1;		temp1_1[2] -= 1;
+					temp1_1[6] -= 1;		temp1_1[14] -= 1;	
+					temp1_1[20] -= 1; 		temp1_1[23] -= 1;
 					
 					
-					temp_cq3_2[0] -= 1;		temp_cq3_2[5] -= 1;
-					temp_cq3_2[7] -= 1;		temp_cq3_2[11] -= 1;
-					temp_cq3_2[14] -= 1;	temp_cq3_2[21] += 1;
+					temp1_2[0] -= 1;		temp1_2[5] -= 1;
+					temp1_2[7] -= 1;		temp1_2[11] -= 1;
+					temp1_2[14] -= 1;	temp1_2[21] += 1;
 					
-					temp_cq3_3[5] -= 1;		temp_cq3_3[6] -= 1;
-					temp_cq3_3[8] -= 1;		temp_cq3_3[15] -= 1;
-					temp_cq3_3[17] -= 1;	temp_cq3_3[19] -= 1;
+					temp1_3[5] -= 1;		temp1_3[6] -= 1;
+					temp1_3[8] -= 1;		temp1_3[15] -= 1;
+					temp1_3[17] -= 1;	temp1_3[19] -= 1;
+				}
+				else if (bt_name2.equals("우울/지침")) {
+					temp1_1[1] -= 1;		temp1_1[3] -= 1;
+					temp1_1[7] -= 1;		temp1_1[19] -= 1;
+					temp1_1[21]-= 1;		temp1_1[22] -= 1;
 					
+					temp1_2[3] -= 1;		temp1_2[4] -= 1;
+					temp1_2[8] -= 1;		temp1_2[10]-= 1;
+					temp1_2[13] -= 1;	temp1_2[15]-= 1;
+					
+					temp1_3[0] -= 1;		temp1_3[2] -= 1;
+					temp1_3[7] -= 1;		temp1_3[10] -= 1;
+					temp1_3[13] -= 1;	temp1_3[22] -= 1;
+				}
+				else if (bt_name2.equals("심심")) {
+					temp1_1[4] -= 1;		temp1_1[5] -= 1;
+					temp1_1[9] -= 1;		temp1_1[11] -= 1;
+					temp1_1[17] -= 1;	temp1_1[23] -= 1;
+					
+					temp1_2[1] -= 1;		temp1_2[6] -= 1;
+					temp1_2[12] -= 1;	temp1_2[17] -= 1;
+					temp1_2[22] -= 1;	temp1_2[23] -= 1;	
+					
+					temp1_3[1] -= 1;		temp1_3[4] -= 1;
+					temp1_3[14] -= 1;	temp1_3[18] -= 1;
+					temp1_3[20] -= 1;	temp1_3[23] -= 1; 
+				}
+				else if (bt_name2.equals("화남")) {
+					temp1_1[8] -= 1;		temp1_1[10] -= 1;
+					temp1_1[12] -= 1; 		temp1_1[13] -= 1;	
+					temp1_1[16] -= 1;		temp1_1[22] -= 1;	
+					
+					temp1_2[2] -= 1;		temp1_2[9] -= 1;
+					temp1_2[16] -= 1;	temp1_2[19] -= 1;
+					temp1_2[20] -= 1;	temp1_2[18] -= 1;
+					
+					temp1_3[3] -= 1;		temp1_3[9] -= 1;
+					temp1_3[11] -= 1;	temp1_3[12] -= 1;
+					temp1_3[16] -= 1;	temp1_3[21] -= 1; 
 				}
 				//sec1Arr.remove(sec1Arr.size()-1);
-				new fourthPageQ2(bt_name2, username);
+				new fourthPageQ2(bt_back1, username, temp1_1, temp1_2, temp1_3);
 				fourthPageQ3.this.setVisible(false);
 
 			}else {
 				if (b.getText().equals("혼자서")){
 					//third1Arr.add(0);
 					
-						temp_cq3_1[1] += 1;		temp_cq3_1[7] += 1;
-						temp_cq3_1[10] += 1;	temp_cq3_1[12] += 1;	
-						temp_cq3_1[14] += 1; 	temp_cq3_1[16] += 1;
-						temp_cq3_1[17] += 1; 	temp_cq3_1[21] += 1;
-						temp_cq3_1[18] += 1; 	
+					temp1_1[1] += 1;	temp1_1[7] += 1;
+					temp1_1[10] += 1;	temp1_1[12] += 1;	
+					temp1_1[14] += 1; 	temp1_1[16] += 1;
+					temp1_1[17] += 1; 	temp1_1[21] += 1;
+					temp1_1[18] += 1; 	
 						
-						temp_cq3_2[0] += 1;		temp_cq3_2[1] += 1;
-						temp_cq3_2[3] += 1;		temp_cq3_2[6] += 1;	
-						temp_cq3_2[8] += 1; 	temp_cq3_2[9] += 1;
-						temp_cq3_2[13] += 1; 	temp_cq3_2[15] += 1;
-						temp_cq3_2[16] += 1; 	temp_cq3_2[19] += 1;
-						temp_cq3_2[12] += 1;	temp_cq3_2[21] += 1;
+						temp1_2[0] += 1;		temp1_2[1] += 1;
+						temp1_2[3] += 1;		temp1_2[6] += 1;	
+						temp1_2[8] += 1; 	temp1_2[9] += 1;
+						temp1_2[13] += 1; 	temp1_2[15] += 1;
+						temp1_2[16] += 1; 	temp1_2[19] += 1;
+						temp1_2[12] += 1;	temp1_2[21] += 1;
 						
-						temp_cq3_3[1] += 1;		temp_cq3_3[4] += 1;
-						temp_cq3_3[7] += 1;		temp_cq3_3[9] += 1;
-						temp_cq3_3[11] += 1;	temp_cq3_3[16] += 1; 
+						temp1_3[1] += 1;		temp1_3[4] += 1;
+						temp1_3[7] += 1;		temp1_3[9] += 1;
+						temp1_3[11] += 1;	temp1_3[16] += 1; 
 						
+						bt_name2 = "혼자서";
 					}
 						
 				else if (b.getText().equals("가족과")){
 					//third1Arr.add(1);
 					
-						temp_cq3_1[3] += 1;		temp_cq3_1[5] += 1;
-						temp_cq3_1[13] += 1;	temp_cq3_1[14] += 1;
-						temp_cq3_1[15] += 1;	
-						temp_cq3_1[18] += 1;	temp_cq3_1[19] += 1;
-						temp_cq3_1[22] += 1;	temp_cq3_1[23] += 1;
+					temp1_1[3] += 1;		temp1_1[5] += 1;
+					temp1_1[13] += 1;	temp1_1[14] += 1;
+					temp1_1[15] += 1;	
+					temp1_1[18] += 1;	temp1_1[19] += 1;
+						temp1_1[22] += 1;	temp1_1[23] += 1;
 						
-						temp_cq3_2[3] += 1;		temp_cq3_2[5] += 1;
-						temp_cq3_2[14] += 1;	temp_cq3_2[22] += 1;
-						temp_cq3_2[23] += 1; 
+						temp1_2[3] += 1;		temp1_2[5] += 1;
+						temp1_2[14] += 1;	temp1_2[22] += 1;
+						temp1_2[23] += 1; 
 					
 						
-						temp_cq3_3[8] += 1;		temp_cq3_3[10] += 1;
-						temp_cq3_3[13] += 1;	temp_cq3_3[17] += 1;
-						temp_cq3_3[18] += 1;	temp_cq3_3[23] += 1; 
+						temp1_3[8] += 1;		temp1_3[10] += 1;
+						temp1_3[13] += 1;	temp1_3[17] += 1;
+						temp1_3[18] += 1;	temp1_3[23] += 1; 
+						bt_name2 = "가족과";
 
 				}
 				else if (b.getText().equals("연인과")){
 					//third1Arr.add(2);
 					
-					temp_cq3_1[0] += 1;		temp_cq3_1[3] += 1;
-					temp_cq3_1[6] += 1;		temp_cq3_1[9] += 1;
-					temp_cq3_1[16] += 1;	
+					temp1_1[0] += 1;		temp1_1[3] += 1;
+					temp1_1[6] += 1;		temp1_1[9] += 1;
+					temp1_1[16] += 1;	
 					
-					temp_cq3_2[1] += 1;		temp_cq3_2[4] += 1;
-					temp_cq3_2[5] += 1;		temp_cq3_2[7] += 1;
-					temp_cq3_2[17] += 1;	temp_cq3_2[23] += 1;
+					temp1_2[1] += 1;		temp1_2[4] += 1;
+					temp1_2[5] += 1;		temp1_2[7] += 1;
+					temp1_2[17] += 1;	temp1_2[23] += 1;
 					
-					temp_cq3_3[2] += 1;		temp_cq3_3[6] += 1;
-					temp_cq3_3[14] += 1;	temp_cq3_3[19] += 1;
-					temp_cq3_3[22] += 1;	temp_cq3_3[0] += 1; 
-					bt_name
+					temp1_3[2] += 1;		temp1_3[6] += 1;
+					temp1_3[14] += 1;	temp1_3[19] += 1;
+					temp1_3[22] += 1;	temp1_3[0] += 1; 
+					bt_name2 = "연인과";
 
 				}
 				
 				else if (b.getText().equals("친구와")){
 					//third1Arr.add(3);
 					
-					temp_cq3_1[2] += 1;		temp_cq3_1[4] += 1;
-					temp_cq3_1[5] += 1;		temp_cq3_1[8] += 1;
-					temp_cq3_1[10] += 1;	temp_cq3_1[11] += 1;
-					temp_cq3_1[14] += 1;	temp_cq3_1[17] += 1;
-					temp_cq3_1[18] += 1;	temp_cq3_1[20] += 1;
-					temp_cq3_1[23] += 1;
+					temp1_1[2] += 1;		temp1_1[4] += 1;
+					temp1_1[5] += 1;		temp1_1[8] += 1;
+					temp1_1[10] += 1;	temp1_1[11] += 1;
+					temp1_1[14] += 1;	temp1_1[17] += 1;
+					temp1_1[18] += 1;	temp1_1[20] += 1;
+					temp1_1[23] += 1;
 					
 					
-					temp_cq3_2[2] += 1;		temp_cq3_2[6] += 1;
-					temp_cq3_2[7] += 1;		temp_cq3_2[10] += 1;
-					temp_cq3_2[11] += 1;	temp_cq3_2[12] += 1;
-					temp_cq3_2[18] += 1;	temp_cq3_2[21] += 1;
-					temp_cq3_2[20] += 1;	
-					temp_cq3_2[22] += 1;	temp_cq3_2[23] += 1;
+					temp1_2[2] += 1;		temp1_2[6] += 1;
+					temp1_2[7] += 1;		temp1_2[10] += 1;
+					temp1_2[11] += 1;	temp1_2[12] += 1;
+					temp1_2[18] += 1;	temp1_2[21] += 1;
+					temp1_2[20] += 1;	
+					temp1_2[22] += 1;	temp1_2[23] += 1;
 					
-					temp_cq3_3[3] += 1;		temp_cq3_3[5] += 1;
-					temp_cq3_3[12] += 1;	temp_cq3_3[11] += 1;
-					temp_cq3_3[15] += 1;	temp_cq3_3[21] += 1;
-					temp_cq3_3[21] += 1; 
+					temp1_3[3] += 1;		temp1_3[5] += 1;
+					temp1_3[12] += 1;	temp1_3[11] += 1;
+					temp1_3[15] += 1;	temp1_3[21] += 1;
+					temp1_3[21] += 1; 
+					bt_name2 = "친구와";
 				}
-				new culture_q(username);
+				new culture_q(bt_name2, username, temp1_1, temp1_2, temp1_3 );
 				fourthPageQ3.this.setVisible(false);
 			}
 				

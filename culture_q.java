@@ -11,17 +11,21 @@ public class culture_q extends JFrame {
 	ArrayList<Integer> fourth1Arr = new ArrayList<>();
 	ArrayList<Integer> third2Arr = new ArrayList<>();
 	static String[] text= {"누구나 좋아하는 유명한 것","남들이 잘 모를법한 새로운 것"};
-	String button_name;
-	static int[] temp_pq1 = fourthPageQ3.temp_cq3_1;
-	static int[] temp_pq2 = fourthPageQ3.temp_cq3_2;
-	static int[] temp_pq3 = fourthPageQ3.temp_cq3_3;
+	static String bt_name3 = fourthPageQ2.bt_name1;
+	//static int[] temp2_1 = fourthPageQ3.temp_cq3_1;
+	//static int[] temp2_2 = fourthPageQ3.temp_cq3_2;
+	//static int[] temp2_3 = fourthPageQ3.temp_cq3_3;
 	static RoundButton[] btn= new RoundButton[4]; 
-	String button_name;
+	int[] temp2_1, temp2_2, temp2_3;
 	String username;
 	
-	public culture_q(String name) {
+	public culture_q(String bt_name, String name, int [] temp1, int[]temp2, int[] temp3) {
 		super("Culture Quetion Page");
 		username = name;
+		bt_name3 = bt_name;
+		temp2_1 = temp1;
+		temp2_2 = temp2;
+		temp2_3 = temp3;
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0,0));
 		setContentPane(contentPane);
@@ -76,6 +80,7 @@ public class culture_q extends JFrame {
 		
 		//fourth1Arr.addAll(fourthArr);
 		//third2Arr.addAll(fourthArr);
+		
 		setSize(1500,800);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -87,28 +92,114 @@ public class culture_q extends JFrame {
 				//fourth1Arr.add(0);
 				
 				for (int i = 0; i <12; i++) {
-					temp_pq1[i] += 5;
-					temp_pq2[i] += 5;
-					temp_pq3[i] += 5;
+					temp2_1[i] += 5;
+					temp2_2[i] += 5;
+					temp2_3[i] += 5;
 				} 
-				new culture_q2(fourth1Arr, username);
+				bt_name3 = "누구나 좋아하는 유명한 것";
+				new culture_q2(bt_name3, username, temp2_1, temp2_2, temp2_3);
 				culture_q.this.setVisible(false);
 			}	
 			else if (b.getText().equals("남들이 잘 모를법한 새로운 것")){
-				fourth1Arr.add(1);
-				/*
+				//fourth1Arr.add(1);
+				
 				for (int i = 12; i < 24; i++) {
-					temp_pq1[i] += 5;
-					temp_pq2[i] += 5;
-					temp_pq3[i] += 5;
-				} */
-				new culture_q2(fourth1Arr, username);
+					temp2_1[i] += 5;
+					temp2_2[i] += 5;
+					temp2_3[i] += 5;
+				} 
+				bt_name3 = "남들이 잘 모를법한 새로운 것";
+				new culture_q2(bt_name3,username,temp2_1, temp2_2, temp2_3);
+			
 				culture_q.this.setVisible(false);
 			}
 			else if (b.getText().equals("이전으로")){ 
+				if (bt_name3 == "혼자서"){
+					//third1Arr.add(0);
+					
+						temp2_1[1] -= 1;	temp2_1[7] -= 1;
+						temp2_1[10] -= 1;	temp2_1[12] -= 1;	
+						temp2_1[14] -= 1; 	temp2_1[16] -= 1;
+						temp2_1[17] -= 1; 	temp2_1[21] -= 1;
+						temp2_1[18] -= 1; 	
+						
+						temp2_2[0] -= 1;		temp2_2[1] -= 1;
+						temp2_2[3] -= 1;		temp2_2[6] -= 1;	
+						temp2_2[8] -= 1; 		temp2_2[9] -= 1;
+						temp2_2[13]-= 1; 		temp2_2[15] -= 1;
+						temp2_2[16] -= 1; 		temp2_2[19] -= 1;
+						temp2_2[12] -= 1;		temp2_2[21] -= 1;
+						
+						temp2_3[1] -= 1;		temp2_3[4] -= 1;
+						temp2_3[7] -= 1;		temp2_3[9] -= 1;
+						temp2_3[11] -= 1;		temp2_3[16] -= 1; 
+							
+						//bt_name3 = "혼자서";
+					}
+						
+				else if (bt_name3 == "가족과"){
+					//third1Arr.add(1);
+					
+					temp2_1[3] -= 1;		temp2_1[5] -= 1;
+					temp2_1[13] -= 1;		temp2_1[14] -= 1;
+					temp2_1[15] -= 1;	
+					temp2_1[18] -= 1;		temp2_1[19] -= 1;
+					temp2_1[22] -= 1;		temp2_1[23] -= 1;
+						
+					temp2_2[3] -= 1;		temp2_2[5] -= 1;
+					temp2_2[14] -= 1;	temp2_2[22] -= 1;
+					temp2_2[23] -= 1; 
+					
+						
+					temp2_3[8] -= 1;		temp2_3[10] -= 1;
+					temp2_3[13] -= 1;	temp2_3[17] -= 1;
+					temp2_3[18] -= 1;	temp2_3[23] -= 1; 
+						//bt_name3 = "가족과";
+
+				}
+				else if (bt_name3 == "연인과"){
+					//third1Arr.add(2);
+					
+					temp2_1[0] -= 1;		temp2_1[3] -= 1;
+					temp2_1[6] -= 1;		temp2_1[9] -= 1;
+					temp2_1[16]-= 1;	
+					
+					temp2_2[1] -= 1;		temp2_2[4] -= 1;
+					temp2_2[5] -= 1;		temp2_2[7] -= 1;
+					temp2_2[17] -= 1;		temp2_2[23] -= 1;
+					
+					temp2_3[2] -= 1;		temp2_3[6] -= 1;
+					temp2_3[14] -= 1;		temp2_3[19] -= 1;
+					temp2_3[22] -= 1;		temp2_3[0] -= 1; 
+					//bt_name3 = "연인과";
+
+				}
 				
-				//third2Arr.remove(third2Arr.size()-1);
-				new fourthPageQ3(username);
+				else if (bt_name3 == "친구와"){
+					//third1Arr.add(3);
+					
+					temp2_1[2] -= 1;		temp2_1[4] -= 1;
+					temp2_1[5] -= 1;		temp2_1[8] -= 1;
+					temp2_1[10]-= 1;		temp2_1[11] -= 1;
+					temp2_1[14] -= 1;		temp2_1[17]-= 1;
+					temp2_1[18] -= 1;		temp2_1[20] -= 1;
+					temp2_1[23] -= 1;
+					
+					
+					temp2_2[2] -= 1;	temp2_2[6] -= 1;
+					temp2_2[7] -= 1;	temp2_2[10] -= 1;
+					temp2_2[11]-= 1;	temp2_2[12] -= 1;
+					temp2_2[18] -= 1;	temp2_2[21] -= 1;
+					temp2_2[20] -= 1;	
+					temp2_2[22] -= 1;	temp2_2[23] -= 1;
+					
+					temp2_3[3] -= 1;	temp2_3[5] -= 1;
+					temp2_3[12] -= 1;	temp2_3[11] -= 1;
+					temp2_3[15] -= 1;	temp2_3[21] -= 1;
+					temp2_3[21] -= 1; 
+					//bt_name3 = "친구와";
+				}
+				new fourthPageQ3(bt_name3,username, temp2_1, temp2_2, temp2_3);
 				culture_q.this.setVisible(false);
 			}
 		}

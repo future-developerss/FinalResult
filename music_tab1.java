@@ -6,18 +6,18 @@ public class music_tab1 extends JPanel {
 	ImageIcon Singer;
 	JLabel s_name, info, finfo,sinfo;
 	String[] Singer_name = {"아이유", "크러쉬", "에스파", "악동뮤지션", "폴킴", "조정석", 
-			"포스트 말론", "앤 마리", "Lauv", "트로이 시반", "Doja cat",
+			"포스트 말론", "앤 마리", "Lauv", "크리스토퍼", "트로이 시반", "Doja cat",
 			"새소년", "헤르쯔 아날로그", "케빈 오", "김윤아", "태연", "백예린",
 			"싱스트리트", "Peach pit", "Lorde", "Barrie", "The 1975", " Mac Ayres"};
 	String[] info1 = {"Palette[2017.04.21]", "나빠(NAPPA)[2019.08.28]", "Next Level[2021.05.17]", "너를 만나[2018.10.29]",
-			"아로하[2020.03.27]", "Sunflower[2018.12.14]", "Speak your mind[2018.08.03]", "I met you when I was 18",
+			"아로하[2020.03.27]", "Sunflower[2018.12.14]", "Speak your mind[2018.08.03]", "I met you when I was 18"," ","",
 			"Blue Neighborhood", "Hot Pink[2019.11.07]", "긴 꿈[2017.06.20]", "어서오세요 여름밤[2014.06.26]", "Baby Blue[2016.05.14]",
 			"315360[2010.04.26]", "Purpose[2019.10.28]", "Every Letter I sent to you", "Sing Street[2016.04.18]", "Being So normal",
 			"Royals[2014.03.31","Happy to be here[2019.05.03]", "Sincerity is scary[2018.11.30]", "Drive Slow[2019.02.12]"
 			
 			};
 	String[] info2 = {"작곡 제휘 작사 아이유", "작곡 크러쉬 작사 크러쉬", "작곡 Mario 작사 유영진", "작곡 이찬혁 작사 이찬혁", "작곡 폴킴 작사 폴킴",
-			"작곡 위종수 작사 김태훈", "", "", "", "", "", "작곡 황소윤 작사 황소윤", "작곡 주하 작사 주하", "작곡 최인희 작사 케빈오", "작곡 김윤아 작사 김윤아", 
+			"작곡 위종수 작사 김태훈", "", "", "", "", "", "","작곡 황소윤 작사 황소윤", "작곡 주하 작사 주하", "작곡 최인희 작사 케빈오", "작곡 김윤아 작사 김윤아", 
 			"작곡 Lance 작사 제이큐", "작곡 백예린 작사 백예린", "", "", "","", "", ""};
 	
 	String[] song_info = {"<html>화려한 코드진행이 돋보이는 기분 좋은 팝재즈 트랙으로 <br>"
@@ -57,7 +57,7 @@ public class music_tab1 extends JPanel {
 			+ "조각된 기억의 파편들로 추억에 잠기게 되는데 이제 그런 곡들을 모두 모으게 되었습니다. <br>"
 			+ "[I met you when I was 18]은 앨범이 아닙니다. <br>"
 			+ "그렇지만 저의 작업의 결과물은 틀림없어요. 여러분도 즐겨 주시길 바랍니다.</html>"	,
-			"<html>","</html>", 
+			"정보 없음","정보 없음", "정보 없음",
 			"<html>\"후렴의 가사를 보면 굉장히 유치한데요. 터무니 없이 보드라워져 터뜨리는 마음을 이야기하고 싶었어요. <br>"
 			+ "더불어 '나는 당신과 함께면 세상을 바꿀 수 있어. (I can change the world to be with you.)<br>'"
 			+ "라는 구절을 통해 사회 속에서 부정 당하는 존재들의 이야기임을 전하고 싶었습니다.\" (황소윤)</html>",
@@ -93,12 +93,12 @@ public class music_tab1 extends JPanel {
 			+ "베이시스트 피터 윌튼(Peter Wilton), 기타리스트 크리스토퍼 밴더쿠이(Chris Vanderkooy), <br>"
 			+ "드러머 마이키 파스쿠찌(Mikey Pascuzzi), <br>"
 			+ "그리고 보컬이자 기타리트스 네일 스미스(Neil Smith)로 구성된 실력파 인디 밴드다.</html>",
-			"<html>", "뉴욕 브루클린을 거점으로 활동하고 있는 드림 팝 밴드 배리(Barrie)는 <br>"
+			"정보 없음", "<html>뉴욕 브루클린을 거점으로 활동하고 있는 드림 팝 밴드 배리(Barrie)는 <br>"
 					+ "밴드의 보컬이자 홍일점 배리 린제이(BarrieLindsay)를 중심으로 <br>"
 					+ "볼티모어, 보스턴, 런던, 그리고 브라질 등 다양한 출신지의 멤버들로 구성되어 있다.<br>"
 					+ "감미로운 여성 보컬에 멜랑꼴리한 멜로디, 일본의 시티팝과 80년대의 레트로 사운드를 곁들인 인디 팝 사운드로 음악 씬에 신선한 바람을 일으키고 있다. </html>",
-
-			+ "<html>90년대 R&B를 연상시키는 달달한 멜로디와 J Dilla의 영향이 담긴 소울풀한 그루브로 채워진 <br>"
+			 "정보 없음",
+			"<html>90년대 R&B를 연상시키는 달달한 멜로디와 J Dilla의 영향이 담긴 소울풀한 그루브로 채워진 <br>"
 			+ "본 EP [Drive Slow]는 Billboard가 선정한 올해의 R&B 앨범 리스트에 이름을 올리며 <br>"
 			+ "Mac Ayres의 화려한 데뷔를 알리기도 했다. <br>"
 			+ "국내 아티스트들의 커버로 화제가 됐던 첫 타이틀곡 “Easy”를 포함하여 “Calvin’s Joint”와 <br>"
