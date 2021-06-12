@@ -193,33 +193,33 @@ public class CultureRoulettePanel extends JPanel{
                 public void mouseClicked(MouseEvent e) {
                     super.mouseClicked(e);
                     JButton btn = (JButton) e.getSource();
-                    if (resB.getText().equals("소울 ")){
+                    if (btn.getText().equals("소울 ")){
                     	new resultPage(18 ,CultureRoulettePanel.this.username);
-        			}else if (resB.getText().equals("조정석 - 아로하 ")){
+        			}else if (btn.getText().equals("조정석 - 아로하 ")){
         				new resultPage_music(5,CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("너의 결혼식 ")){
+        			else if (btn.getText().equals("너의 결혼식 ")){
         				new resultPage(0, CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("아이유 - 이 지금 ")){
+        			else if (btn.getText().equals("아이유 - 이 지금 ")){
         				new resultPage_music(0,CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("크러쉬 - 나빠 ")){
+        			else if (btn.getText().equals("크러쉬 - 나빠 ")){
         				new resultPage_music(1,CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("포스트말론 - sunflower ")){
+        			else if (btn.getText().equals("포스트말론 - sunflower ")){
         				new resultPage_music(6, CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("구병모 - 아가미 ")){
+        			else if (btn.getText().equals("구병모 - 아가미 ")){
         				new resultPage_Book(0, CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("유현준 - 공간의 미래 ")){
+        			else if (btn.getText().equals("유현준 - 공간의 미래 ")){
         				new resultPage_Book(1, CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("나태주 - 풀꽃 ")){
+        			else if (btn.getText().equals("나태주 - 풀꽃 ")){
         				new resultPage_Book(2, CultureRoulettePanel.this.username);
         			}
-        			else if (resB.getText().equals("미비포유 ")){
+        			else if (btn.getText().equals("미비포유 ")){
         				new resultPage_Book(6, CultureRoulettePanel.this.username);
         			}
         			
