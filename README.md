@@ -18,7 +18,7 @@ pull시에도,
 
 git pull origin master -> git pull origin main -f 로 하면 됩니다.. (기존의 코드에서 조금 수정!)
 
----다른 branch pull 할때
+---다른 branch pull 할때-----
 git pull origin (branchname) --allow-unrelated-histories
 
 
