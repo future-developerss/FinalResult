@@ -177,7 +177,7 @@ public class PracFrame extends JFrame {
         tab.addTab("추천 Point", recommend);
         tab.addTab("다른 추천", otherReco);
         p2.add(tab);
-        tab.setBounds(700, 90, 700, 400);
+        tab.setBounds(700, 70, 700, 400);
 
         contentPane.add("Center", p2);
 
